@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>StoryShare</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">StoryShare</div>
+    </header>
+    <main>
+      <div id="popup">
+        <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2>Message</h2>
+          <p id="popup-message"></p>
+        </div>
+      </div>
+      <div id="auth-form" class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h2>Register</h2>
+            <button class="accordion-btn"><span class="icon"></span></button>
+          </div>
+          <div id="reg-content">
+            <div class="form">
+              <label for="reg-username">Name:</label>
+              <input
+                type="text"
+                id="reg-username"
+                name="reg-username"
+                required
+              />
+              <label for="reg-email-address">Email Address:</label>
+              <input
+                type="text"
+                id="reg-email-address"
+                name="reg-email-address"
+                required
+              />
+              <label for="reg-password">Password:</label>
+              <input
+                type="password"
+                id="reg-password"
+                name="reg-password"
+                required
+              />
+              <button type="button" id="reg-submit-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <h2>Login</h2>
+            <button class="accordion-btn"><span class="icon"></span></button>
+          </div>
+          <div id="login-content">
+            <div class="form">
+              <label for="login-id">Email Address:</label>
+              <input type="text" id="login-id" name="login-id" required />
+              <label for="login-password">Password:</label>
+              <input
+                type="password"
+                id="login-password"
+                name="login-password"
+                required
+              />
+              <button type="button" id="login-submit-btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="social-icons">
+        <img src="/images/google.png" alt="Google" class="social-icon" />
+        <img src="/images/facebook.png" alt="Facebook" class="social-icon" />
+        <img src="/images/apple.png" alt="Apple" class="social-icon" />
+      </div>
+    </main>
+    <footer>
+      <p>&copy; StoryShare, all rights reserved.</p>
+    </footer>
+    <script src="auth.js"></script>
+  </body>
+</html>
